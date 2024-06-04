@@ -22,13 +22,13 @@ Send 2900 transaction in parallel (100 for each of the 29 listed nodes), for a t
 6   0.0.9   6.testnet.hedera.com    34.133.197.230  52.14.252.207
 
 
-LG                          0    0.0.3        {"35.237.200.180"}: new AccountId(3)},
-Swirlds                     1    0.0.4        {"35.186.191.247"}: new AccountId(4)},
-FIS                         2    0.0.5        {"35.192.2.25"}: new AccountId(5)},
-Wipro                       3    0.0.6        {"35.199.161.108"}: new AccountId(6)},
-Nomura                      4    0.0.7        {"35.203.82.240"}: new AccountId(7)},
-Google                      5    0.0.8        {"35.236.5.219"}: new AccountId(8)},
-Zain                        6    0.0.9        {"35.197.192.225"}: new AccountId(9)},
+LG                          0    0.0.3         {"35.237.200.180"}: new AccountId(3)},
+Swirlds                     1    0.0.4         {"35.186.191.247"}: new AccountId(4)},
+FIS                         2    0.0.5         {"35.192.2.25"}: new AccountId(5)},
+Wipro                       3    0.0.6         {"35.199.161.108"}: new AccountId(6)},
+Nomura                      4    0.0.7         {"35.203.82.240"}: new AccountId(7)},
+Google                      5    0.0.8         {"35.236.5.219"}: new AccountId(8)},
+Zain                        6    0.0.9         {"35.197.192.225"}: new AccountId(9)},
 Magalu                      7    0.0.10        {"35.242.233.154"}: new AccountId(10)},
 Boeing                      8    0.0.11        {"35.240.118.96"}: new AccountId(11)},
 DLA Piper                   9    0.0.12        {"35.204.86.32"}: new AccountId(12)},
