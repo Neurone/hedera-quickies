@@ -13,6 +13,19 @@ In this moment there are 31 CNs, so 3,100 txs that will execute 27,900 NFT trans
 ./mainnet-transfer-tokens.sh 100
 ```
 
+You can update the above script with the latest consensus node information using the following command:
+
+```bash
+❯ ./create-script-mainnet-transfer-tokens.sh
+# Script mainnet-transfer-tokens.sh created!
+# Run with:
+#
+# ./mainnet-transfer-tokens.sh <number>
+#
+# Where <number> is the number of transactions you want to send to each consensus node.
+# Hint: consider trying with a single transaction to check for consensus nodes availability before going all-in.
+```
+
 ## Hint
 
 Consider trying with a single transaction to check for consensus nodes availability before going all-in.
