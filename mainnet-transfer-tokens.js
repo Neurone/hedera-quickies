@@ -1,33 +1,39 @@
-
 require("dotenv").config();
 const {
   Client,
+  AccountId,
   PrivateKey,
-  AccountCreateTransaction,
-  AccountBalanceQuery,
-  Hbar,
   TransferTransaction,
-  TokenId,
-  AccountId
 } = require("@hashgraph/sdk");
 
 async function main() {
   const payerAccountID = process.env.MAINNET_ACCOUNT_ID;
   const payerPrivateKey = process.env.MAINNET_PRIVATE_KEY;
 
-  let transactionsPerNode = argv("txsPerNode") ? argv("txsPerNode") : 1
+  let transactionsPerNode = argv("txsPerNode") ? argv("txsPerNode") : 1;
   let tokenId = argv("tokenId") ? argv("tokenId") : "0.0.5946044";
-  let nodeIP = argv("nodeIP") ? argv("nodeIP") : ""
-  let nodeAccountNumber = argv("nodeAccountNumber") ? argv("nodeAccountNumber") : ""
-  let nodeIPAndPort = nodeIP + ":50211"
+  let nodeIP = argv("nodeIP") ? argv("nodeIP") : "";
+  let nodeAccountNumber = argv("nodeAccountNumber")
+    ? argv("nodeAccountNumber")
+    : "";
+  let nodeId = argv("nodeId") ? argv("nodeId") : "";
+  let nodeIPAndPort = nodeIP + ":50211";
 
-  let node
-  eval("node = { \"" + nodeIPAndPort + "\": new AccountId(" + nodeAccountNumber + ") }")
-  let client = Client.forNetwork(node).setOperator(payerAccountID, payerPrivateKey)
-  client.setMaxAttempts(100)
+  let node;
+  eval('node = { "' + nodeIPAndPort + '": "0.0.' + nodeAccountNumber + '" }');
+  let client = Client.forNetwork(node).setOperator(
+    payerAccountID,
+    payerPrivateKey
+  );
+  client.setMaxAttempts(100);
 
-  //console.log("Creating and signing", transactionsPerNode, "transactions for token", tokenId)
-  let txs = []
+  console.log(
+    "Creating and signing",
+    transactionsPerNode,
+    "transactions for token",
+    tokenId
+  );
+  let txs = [];
 
   for (let txIndex = 0; txIndex < transactionsPerNode; txIndex++) {
     let tx = await new TransferTransaction()
@@ -41,24 +47,31 @@ async function main() {
       .addTokenTransfer(tokenId, "5946065", 1)
       .addTokenTransfer(tokenId, "5946120", 1)
       .addTokenTransfer(tokenId, "1015695", -9)
-      .freezeWith(client)
-    txs[txIndex] = await tx.sign(PrivateKey.fromStringDer(payerPrivateKey))
+      .freezeWith(client);
+    txs[txIndex] = await tx.sign(PrivateKey.fromStringDer(payerPrivateKey));
   }
 
-  //console.log("Fire and forget all the batches to", nodeIPAndPort, nodeAccountNumber)
+  console.log(
+    "Fire and forget all the batches to",
+    nodeIPAndPort,
+    "nodeId:",
+    nodeId,
+    "nodeAccount:",
+    nodeAccountNumber
+  );
   for (let txIndex = 0; txIndex < txs.length; txIndex++) {
     try {
       txs[txIndex].execute(client);
       //console.log(txs[txIndex].transactionId.toString(), nodeIPAndPort, nodeAccountNumber)
     } catch (error) {
-      console.error("Error ", txIndex, "(txIndex")
+      console.error("Error ", txIndex, "(txIndex");
     }
   }
 
-  // Wait 10 seconds, so NodeJS does not close the pending operations
-  await new Promise(resolve => setTimeout(resolve, 10000));
-  console.log("Node ID", nodeAccountNumber, "completed")
-  process.exit(0)
+  // Wait 10 seconds, so NodeJS does not close potentially pending operations
+  await new Promise((resolve) => setTimeout(resolve, 10000));
+  console.log("Node ID", nodeAccountNumber, "completed");
+  process.exit(0);
 }
 
 const argv = (key) => {
