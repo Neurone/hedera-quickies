@@ -57,7 +57,8 @@ async function main() {
     "nodeId:",
     nodeId,
     "nodeAccount:",
-    nodeAccountNumber
+    nodeAccountNumber,
+    "and waiting 10 seconds before closing the process (just in case)"
   );
   for (let txIndex = 0; txIndex < txs.length; txIndex++) {
     try {
@@ -70,7 +71,7 @@ async function main() {
 
   // Wait 10 seconds, so NodeJS does not close potentially pending operations
   await new Promise((resolve) => setTimeout(resolve, 10000));
-  console.log("Node ID", nodeAccountNumber, "completed");
+  console.log("Node ID", nodeAccountNumber, "connection closed.");
   process.exit(0);
 }
 
