@@ -71,7 +71,7 @@ async function main() {
 
   // Wait 10 seconds, so NodeJS does not close potentially pending operations
   await new Promise((resolve) => setTimeout(resolve, 10000));
-  console.log("Node ID", nodeAccountNumber, "connection closed.");
+  console.log("Node Account", nodeAccountNumber, "connection closed.");
   process.exit(0);
 }
 

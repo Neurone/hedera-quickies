@@ -57,7 +57,112 @@ In case some CN does not respond, comment that line in the main script or find a
 ]
 ```
 
-## Useful data
+## Real-world examples
+
+Below you can see the details of sending 5,100 transactions (or 45,900 NFT transfers), 100% success - 0% fails, in 3.6 seconds:
+
+That's about 1,500 TPS. It's not a network limit; I just computed the maximum transactions I can send without needing to top up my current account balance at the time.
+
+- The first transaction reached consensus at [5:49:35.8316 PM on August 7, 2025 GMT+2](https://hashscan.io/mainnet/transaction/1754581775.831676000).
+- The last transaction reached consensus at [5:49:39.4159 PM on August 7, 2025 GMT+2](https://hashscan.io/mainnet/transaction/1754581779.415959000).
+- Blocks involved: [82936680](https://hashscan.io/mainnet/block/82936680), [82936681](https://hashscan.io/mainnet/block/82936681), [82936682](https://hashscan.io/mainnet/block/82936682)
+
+```zsh
+❯ ./mainnet-transfer-tokens.sh 170
+Waiting artificially 20 seconds (just in case) for all the processes to finish.
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Creating and signing 170 transactions for token 0.0.5946044
+Fire and forget all the batches to 34.239.82.6:50211 nodeId: 0 nodeAccount: 3 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 13.56.4.96:50211 nodeId: 24 nodeAccount: 27 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 13.52.108.243:50211 nodeId: 3 nodeAccount: 6 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 3.130.52.236:50211 nodeId: 1 nodeAccount: 4 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 141.94.175.187:50211 nodeId: 15 nodeAccount: 18 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 3.18.91.176:50211 nodeId: 20 nodeAccount: 23 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 3.114.54.4:50211 nodeId: 4 nodeAccount: 7 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 217.76.57.165:50211 nodeId: 28 nodeAccount: 31 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 18.168.4.59:50211 nodeId: 16 nodeAccount: 19 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 35.177.162.180:50211 nodeId: 9 nodeAccount: 12 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 34.16.139.248:50211 nodeId: 31 nodeAccount: 34 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 34.82.78.255:50211 nodeId: 17 nodeAccount: 20 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 13.200.238.211:50211 nodeId: 30 nodeAccount: 33 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 34.64.141.166:50211 nodeId: 19 nodeAccount: 22 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 13.36.123.209:50211 nodeId: 18 nodeAccount: 21 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 35.183.66.150:50211 nodeId: 5 nodeAccount: 8 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 3.121.238.26:50211 nodeId: 12 nodeAccount: 15 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 3.248.27.48:50211 nodeId: 7 nodeAccount: 10 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 34.201.177.212:50211 nodeId: 27 nodeAccount: 30 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 155.204.19.218:50211 nodeId: 32 nodeAccount: 35 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 13.232.240.207:50211 nodeId: 22 nodeAccount: 25 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 34.142.71.129:50211 nodeId: 26 nodeAccount: 29 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 34.215.192.104:50211 nodeId: 10 nodeAccount: 13 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 18.139.47.5:50211 nodeId: 25 nodeAccount: 28 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 35.236.2.27:50211 nodeId: 11 nodeAccount: 14 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 18.232.251.19:50211 nodeId: 14 nodeAccount: 17 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 3.20.81.230:50211 nodeId: 29 nodeAccount: 32 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 35.181.158.250:50211 nodeId: 6 nodeAccount: 9 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 95.216.139.215:50211 nodeId: 34 nodeAccount: 37 and waiting 10 seconds before closing the process (just in case)
+Fire and forget all the batches to 18.135.7.211:50211 nodeId: 21 nodeAccount: 24 and waiting 10 seconds before closing the process (just in case)
+Node Account 6 connection closed.
+Node Account 27 connection closed.
+Node Account 4 connection closed.
+Node Account 18 connection closed.
+Node Account 23 connection closed.
+Node Account 7 connection closed.
+Node Account 31 connection closed.
+Node Account 19 connection closed.
+Node Account 34 connection closed.
+Node Account 12 connection closed.
+Node Account 22 connection closed.
+Node Account 21 connection closed.
+Node Account 20 connection closed.
+Node Account 33 connection closed.
+Node Account 8 connection closed.
+Node Account 15 connection closed.
+Node Account 30 connection closed.
+Node Account 25 connection closed.
+Node Account 29 connection closed.
+Node Account 13 connection closed.
+Node Account 35 connection closed.
+Node Account 14 connection closed.
+Node Account 17 connection closed.
+Node Account 32 connection closed.
+Node Account 9 connection closed.
+Node Account 37 connection closed.
+Node Account 24 connection closed.
+Node Account 3 connection closed.
+Node Account 10 connection closed.
+Node Account 28 connection closed.
+```
+
+## Miscellanea
 
 ```text
 Mainnet (probably not updated, use create-script-mainnet-transfer-tokens.sh to refresh the script)
