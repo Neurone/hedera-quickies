@@ -20,7 +20,7 @@ The monitor waits 30 blocks behind the current block to ensure event finality be
 
 ## Setup
 
-1. Set your private key as an environment variable:
+1. If you want to use the send-transactions script, set your private key as an environment variable:
 
    ```zsh
    export PK=your_private_key_here
