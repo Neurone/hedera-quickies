@@ -13,7 +13,7 @@ The monitor waits 30 blocks behind the current block to ensure event finality be
 
 ## Prerequisites
 
-- [Foundry's `cast`](https://book.getfoundry.sh/cast/) command-line tool
+- [Foundry's `cast`](https://getfoundry.sh/cast/overview/) command-line tool
 - `jq` for JSON processing
 - `bc` for arithmetic operations
 - A private key with sufficient balance for sending transactions
