@@ -1,0 +1,4 @@
+data/last_examined_block
+data/nonce
+data/transactions_seen_in_events
+data/transactions_sent
