@@ -16,3 +16,6 @@ See [how-to-transfer-50k-nfts-in-less-than-4-seconds](./how-to-transfer-50k-nfts
 
 ## Monitoring EVM events
 
+A monitoring tool for tracking EVM smart contract events on the Hedera network in real-time. The project provides scripts to continuously poll for contract events with configurable block delay for finality, and to send test transactions with automatic nonce management. Useful for testing event emission, monitoring contract activity, and verifying transaction processing.
+
+See [monitoring-evm-events](./monitoring-evm-events/README.md) for details.
