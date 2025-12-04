@@ -10,4 +10,4 @@ nonce=$(cat data/nonce)
 
 cast send $address $calldata --private-key $PK --async --nonce $nonce >> data/transactions_sent
 
-echo $(bc -e "$(cat data/nonce) + 1") > data/nonce
+echo $(echo "$(cat data/nonce) + 1" | bc) > data/nonce

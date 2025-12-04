@@ -39,7 +39,7 @@ The monitor waits 30 blocks behind the current block to ensure event finality be
 Listen for events on a smart contract (polls every 5 seconds):
 
 ```zsh
-for (( ; ; )); do ./check-events.sh 0xeC76DF9C54622968936c484C027d588D7d4f7433; sleep 5; done
+for (( ; ; )); do ./check-events.sh 0xeC76DF9C54622968936c484C027d588D7d4f7433; sleep 5; done | tee check-events.log
 ```
 
 ### Send Test Transactions
@@ -59,7 +59,7 @@ Send a single transaction that does not trigger an event:
 Send 1000 transactions with random delays (0.5-1 second between transactions):
 
 ```zsh
-for (( i=1; i<=1000; i++)); do ./send-transactions.sh 0xeC76DF9C54622968936c484C027d588D7d4f7433 0x4b957ca8; sleep 0.$(shuf -i 50-99 -n 1); done
+for (( i=1; i<=1000; i++)); do ./send-transactions.sh 0xeC76DF9C54622968936c484C027d588D7d4f7433 0x4b957ca8; sleep 0.$(shuf -i 50-99 -n 1); done | tee send-transactions.log
 ```
 
 ## How It Works
